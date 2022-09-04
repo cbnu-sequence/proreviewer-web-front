@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import HomePage from '../../../pages';
 
 describe('홈', () => {
-  it('초기 셋팅 확인 (삭제 예정)', () => {
+  it('홈 화면', () => {
     render(<HomePage />);
 
     const home = screen.getByText('홈');
