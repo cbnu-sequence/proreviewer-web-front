@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useCustomToast } from '../../common/hooks/useCustomToast';
 import { useInput } from '../../common/hooks/useInput';
 import { StyledLogin } from './styles';
 
@@ -6,9 +7,19 @@ const Login = () => {
   const email = useInput('');
   const password = useInput('');
 
+  const toast = useCustomToast();
+
+  const onSubmitForm = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    toast({
+      title: '시퀀스에 로그인 하신 것을 환영합니다',
+      status: 'success',
+    });
+  };
+
   return (
     <StyledLogin>
-      <form>
+      <form onSubmit={onSubmitForm}>
         <input
           className="email"
           type="email"

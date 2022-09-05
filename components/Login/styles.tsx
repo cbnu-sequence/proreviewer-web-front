@@ -11,6 +11,7 @@ export const StyledLogin = styled.div`
       margin-top: 10px;
       border: 1px solid lightgray;
       border-radius: 5px;
+      font-size: 11px;
     }
     button {
       width: 100%;
@@ -20,6 +21,7 @@ export const StyledLogin = styled.div`
       border-radius: 10px;
       font-weight: 700;
       background-color: skyblue;
+      font-size: 11px;
       color: white;
       cursor: pointer;
     }
