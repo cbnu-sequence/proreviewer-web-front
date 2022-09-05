@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useCustomToast } from '../../common/hooks/useCustomToast';
 import { useInput } from '../../common/hooks/useInput';
 import { UseLoginMutation } from '../../state/react-query/hooks/auth';
 import { StyledLogin } from './styles';
@@ -6,12 +7,26 @@ import { StyledLogin } from './styles';
 const Login = () => {
   const { mutate } = UseLoginMutation();
 
+  const toast = useCustomToast();
+
   const email = useInput('');
   const password = useInput('');
 
   const onSubmitForm = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    mutate({ email: email.value, password: password.value });
+    if (!email.value) {
+      toast({
+        title: '이메일을 입력해주세요.',
+        status: 'warning',
+      });
+    } else if (!password.value) {
+      toast({
+        title: '비밀번호를 입력해주세요.',
+        status: 'warning',
+      });
+    } else {
+      mutate({ email: email.value, password: password.value });
+    }
   };
 
   return (
