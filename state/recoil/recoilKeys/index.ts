@@ -1,3 +1,5 @@
 export const recoilKeys = {
-  atom: {},
+  atom: {
+    userState: 'userState',
+  },
 };
