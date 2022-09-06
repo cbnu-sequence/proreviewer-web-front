@@ -40,6 +40,24 @@ export const StyledLogin = styled.div`
     }
   }
 
+  .register-api {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    .register-google,
+    .register-github {
+      border: 1px solid lightgray;
+      border-radius: 50%;
+      padding: 5px;
+      margin: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
   @media screen and (max-width: 768px) {
     form {
       width: 80%;
