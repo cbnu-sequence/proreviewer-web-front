@@ -4,7 +4,7 @@ interface StyledSideBarProps {
   width: number;
 }
 
-export const StyledSideBar = styled.nav<StyledSideBarProps>`
+export const StyledSideBar = styled.div<StyledSideBarProps>`
   position: absolute;
   left: 0;
   top: 0;
@@ -13,4 +13,14 @@ export const StyledSideBar = styled.nav<StyledSideBarProps>`
   height: 100vh;
   background-color: #2c2b2b;
   color: white;
+  nav {
+    width: 98%;
+    margin: 40px auto 0;
+    text-align: center;
+    font-size: 13px;
+    a {
+      display: block;
+      margin: 30px 0;
+    }
+  }
 `;
