@@ -1,26 +1,41 @@
 import Link from 'next/link';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState, useRecoilValue } from 'recoil';
 import { sidebarState } from '../../../state/recoil/sidebar';
 import DraggableDiv from './DraggableDiv';
-import { StyledSideBar } from './styles';
+import { StyledCloseSideBar, StyledOpenSideBar } from './styles';
 
 const SideBar = () => {
-  const sideBar = useRecoilValue(sidebarState);
+  const [sideBar, setSideBar] = useRecoilState(sidebarState);
 
   const onDragOver = (e: { preventDefault: () => void }) => {
     e.preventDefault();
   };
 
   return (
-    <StyledSideBar width={sideBar.width} onDragOver={onDragOver}>
-      <nav>
-        <Link href="/">홈</Link>
-        <Link href="#">학습 일정표</Link>
-        <Link href="#">노트</Link>
-        <Link href="#">시험지</Link>
-      </nav>
-      <DraggableDiv />
-    </StyledSideBar>
+    <>
+      {sideBar.open ? (
+        <StyledOpenSideBar width={sideBar.width} onDragOver={onDragOver}>
+          <div className="close-button">
+            <button onClick={() => setSideBar({ ...sideBar, open: false })}>
+              &#171;
+            </button>
+          </div>
+          <nav>
+            <Link href="/">홈</Link>
+            <Link href="#">학습 일정표</Link>
+            <Link href="#">노트</Link>
+            <Link href="#">시험지</Link>
+          </nav>
+          <DraggableDiv />
+        </StyledOpenSideBar>
+      ) : (
+        <StyledCloseSideBar>
+          <button onClick={() => setSideBar({ ...sideBar, open: true })}>
+            &#187;
+          </button>
+        </StyledCloseSideBar>
+      )}
+    </>
   );
 };
 
