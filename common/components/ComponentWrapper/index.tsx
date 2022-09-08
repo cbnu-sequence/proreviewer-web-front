@@ -14,7 +14,11 @@ const ComponentWrapper = ({ children }: ComponentWrapperProps) => {
   };
 
   return (
-    <StyledWrapper sideBar={sideBar.width} onDragOver={onDragOver}>
+    <StyledWrapper
+      open={sideBar.open}
+      sideBar={sideBar.width}
+      onDragOver={onDragOver}
+    >
       {children}
     </StyledWrapper>
   );
