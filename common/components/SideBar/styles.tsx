@@ -12,6 +12,7 @@ export const StyledOpenSideBar = styled.div<StyledOpenSideBarProps>`
   height: 100vh;
   background-color: #2c2b2b;
   color: white;
+  z-index: 100;
   .close-button {
     text-align: end;
     margin-right: 7px;
@@ -42,6 +43,7 @@ export const StyledCloseSideBar = styled.div`
   background-color: #2c2b2b;
   color: white;
   text-align: center;
+  z-index: 100;
   button {
     font-size: 20px;
     font-weight: 700;
