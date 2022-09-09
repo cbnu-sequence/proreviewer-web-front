@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
 interface StyledWrapperProps {
-  sideBar: number;
-  open: boolean;
+  width: number;
+  isOpened: boolean;
 }
 
 export const StyledWrapper = styled.div<StyledWrapperProps>`
-  margin-left: ${(props) => (props.open ? props.sideBar : 30)}px;
+  margin-left: ${(props) => (props.isOpened ? props.width : 30)}px;
   min-height: 100vh;
 `;

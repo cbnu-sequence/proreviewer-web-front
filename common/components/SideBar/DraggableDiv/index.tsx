@@ -6,8 +6,8 @@ const DraggableDiv = () => {
   const setSidebar = useSetRecoilState(sidebarState);
 
   const onDragEnd = (e: { clientX: number }) => {
-    if (e.clientX <= 160) setSidebar({ width: 160, open: true });
-    else setSidebar({ width: e.clientX, open: true });
+    if (e.clientX <= 160) setSidebar({ width: 160, isOpened: true });
+    else setSidebar({ width: e.clientX, isOpened: true });
   };
 
   return <StyledDraggableDiv draggable="true" onDragEnd={onDragEnd} />;
