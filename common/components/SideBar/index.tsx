@@ -2,15 +2,10 @@ import Link from 'next/link';
 import { useCallback } from 'react';
 import { useRecoilState } from 'recoil';
 import { sidebarState } from '../../../state/recoil/sidebar';
-import DraggableDiv from './DraggableDiv';
 import { StyledCloseSideBar, StyledOpenSideBar } from './styles';
 
 const SideBar = () => {
   const [sideBar, setSideBar] = useRecoilState(sidebarState);
-
-  const onDragOver = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-  };
 
   const onClickButton = useCallback(
     (bool: boolean) => {
@@ -22,7 +17,7 @@ const SideBar = () => {
   return (
     <>
       {sideBar.isOpened ? (
-        <StyledOpenSideBar width={sideBar.width} onDragOver={onDragOver}>
+        <StyledOpenSideBar isOpened={sideBar.isOpened}>
           <div className="close-button">
             <button onClick={() => onClickButton(false)}>&#171;</button>
           </div>
@@ -32,7 +27,6 @@ const SideBar = () => {
             <Link href="#">노트</Link>
             <Link href="#">시험지</Link>
           </nav>
-          <DraggableDiv />
         </StyledOpenSideBar>
       ) : (
         <StyledCloseSideBar>
