@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 
-interface StyledOpenSideBarProps {
-  width: number;
-}
+type StyledOpenSideBarProps = {
+  [K in 'isOpened']: boolean;
+};
 
 export const StyledOpenSideBar = styled.div<StyledOpenSideBarProps>`
   position: absolute;
   left: 0;
   top: 0;
-  width: ${(props) => props.width}px;
+  width: ${(props) => props.isOpened && '200'}px;
   height: 100vh;
   background-color: #2c2b2b;
   color: white;
