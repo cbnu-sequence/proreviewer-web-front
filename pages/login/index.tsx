@@ -14,11 +14,3 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
-export const getStaticProps = async () => {
-  return {
-    props: {
-      layout: 'no-sidebar',
-    },
-  };
-};
