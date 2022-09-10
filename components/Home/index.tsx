@@ -1,12 +1,8 @@
-import { useRecoilValue } from 'recoil';
-import { sidebarState } from '../../state/recoil/sidebar';
 import { StyledHome } from './styles';
 
 const Home = () => {
-  const sideBar = useRecoilValue(sidebarState);
-
   return (
-    <StyledHome isOpened={sideBar.isOpened}>
+    <StyledHome>
       <div className="home">홈</div>
     </StyledHome>
   );
