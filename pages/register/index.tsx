@@ -14,11 +14,3 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
-
-export const getStaticProps = async () => {
-  return {
-    props: {
-      layout: 'no-sidebar',
-    },
-  };
-};

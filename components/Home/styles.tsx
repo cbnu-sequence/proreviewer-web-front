@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 
-export const StyledHome = styled.div`
-  //margin-left: 200px;
+type StyledHomeProps = {
+  isOpened: boolean;
+};
+
+export const StyledHome = styled.div<StyledHomeProps>`
+  margin-left: ${(props) => (props.isOpened ? '200' : '30')}px;
 `;
