@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useCustomToast } from '../../common/hooks/useCustomToast';
 import { useInput } from '../../common/hooks/useInput';
 import { UseLoginMutation } from '../../state/react-query/hooks/auth';
 import { StyledLogin } from './styles';
+import Social from './Social';
 
 const Login = () => {
   const { mutate } = UseLoginMutation();
@@ -55,24 +55,7 @@ const Login = () => {
           간편 회원가입
         </Link>
       </div>
-      <div className="register-api">
-        <div className="register-google">
-          <Image
-            src="/google.png"
-            width="19px"
-            height="19px"
-            alt="구글 로그인"
-          />
-        </div>
-        <div className="register-github">
-          <Image
-            src="/github.png"
-            width="20px"
-            height="20px"
-            alt="깃허브 로그인"
-          />
-        </div>
-      </div>
+      <Social />
     </StyledLogin>
   );
 };
