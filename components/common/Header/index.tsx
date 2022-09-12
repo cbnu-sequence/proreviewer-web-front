@@ -7,21 +7,21 @@ const Header = () => {
   const [isOpenedMenu, setIsOpenedMenu] = useState(false);
 
   return (
-    <StyledHeader>
-      <div className="headerDiv">Pro Reviewer</div>
+    <StyledHeader className="header">
+      <div className="header__div">Pro Reviewer</div>
       {!isOpenedMenu ? (
-        <div className="menu-openIcon" onClick={() => setIsOpenedMenu(true)}>
+        <div className="header__openIcon" onClick={() => setIsOpenedMenu(true)}>
           <AiOutlineMenu />
         </div>
       ) : (
         <>
           <div
-            className="menu-closeIcon"
+            className="header__closeIcon"
             onClick={() => setIsOpenedMenu(false)}
           >
             <AiOutlineDoubleLeft />
           </div>
-          <nav className="menu">
+          <nav className="header__menu">
             <Link href="/">홈</Link>
             <Link href="#">학습 일정표</Link>
             <Link href="#">노트</Link>
