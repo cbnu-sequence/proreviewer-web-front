@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Header from '../common/components/Header';
+import Header from '../components/common/Header';
 import Home from '../components/Home';
 
 const HomePage = () => {
