@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { githubLogin } from '../../apis/auth';
-import Loading from '../../components/Loading';
+import Loading from '../../components/common/Loading';
 import { UseLoginMutation } from '../../state/react-query/hooks/auth';
 
 const Redirect = () => {
