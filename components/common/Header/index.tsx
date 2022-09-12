@@ -9,13 +9,16 @@ const Header = () => {
   return (
     <StyledHeader>
       <div className="headerDiv">Pro Reviewer</div>
-      {isOpenedMenu ? (
-        <div className="menu-openIcon" onClick={() => setIsOpenedMenu(false)}>
+      {!isOpenedMenu ? (
+        <div className="menu-openIcon" onClick={() => setIsOpenedMenu(true)}>
           <AiOutlineMenu />
         </div>
       ) : (
         <>
-          <div className="menu-closeIcon" onClick={() => setIsOpenedMenu(true)}>
+          <div
+            className="menu-closeIcon"
+            onClick={() => setIsOpenedMenu(false)}
+          >
             <AiOutlineDoubleLeft />
           </div>
           <nav className="menu">
