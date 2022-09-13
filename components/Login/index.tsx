@@ -4,6 +4,9 @@ import { UseLoginMutation } from '../../state/react-query/hooks/auth';
 import { StyledLogin } from './styles';
 import Social from './Social';
 import { LOGIN_METHOD } from '../../constants/login';
+import { useRecoilState } from 'recoil';
+import { ToastListState } from '../../state/recoil/toastList';
+import uuid from 'react-uuid';
 
 const Login = () => {
   const { mutate } = UseLoginMutation(LOGIN_METHOD.SELF);
@@ -11,12 +14,20 @@ const Login = () => {
   const email = useInput('');
   const password = useInput('');
 
+  const [toastList, setToastList] = useRecoilState(ToastListState);
+
   const onSubmitForm = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!email.value) {
-      alert('이메일을 입력해주세요.');
+      setToastList([
+        { category: 'Warn', message: '이메일을 입력해주세요.', id: uuid() },
+        ...toastList,
+      ]);
     } else if (!password.value) {
-      alert('비밀번호를 입력해주세요.');
+      setToastList([
+        { category: 'Warn', message: '비밀번호를 입력해주세요.', id: uuid() },
+        ...toastList,
+      ]);
     } else {
       mutate({ email: email.value, password: password.value });
     }
