@@ -8,7 +8,11 @@ const Header = () => {
 
   return (
     <StyledHeader className="header">
-      <div className="header__div">Pro Reviewer</div>
+      <div className="header__div">
+        <Link href="/">
+          <img className="proReLogo" src="/proReLogo.png" />
+        </Link>
+      </div>
       {!isOpenedMenu ? (
         <div className="header__openIcon" onClick={() => setIsOpenedMenu(true)}>
           <AiOutlineMenu />

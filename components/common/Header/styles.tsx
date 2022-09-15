@@ -12,6 +12,11 @@ export const StyledHeader = styled.header`
       top: 0;
       right: 0;
       padding: 10px 0;
+      .proReLogo {
+        margin: 11px;
+        width: 200px;
+        cursor: pointer;
+      }
     }
     &__openIcon {
       position: fixed;
@@ -35,7 +40,7 @@ export const StyledHeader = styled.header`
       top: 0;
       left: 0;
       bottom: 0;
-      background-color: #2c2b2b;
+      background-color: #2FA599;
       color: white;
       width: 200px;
       font-size: 12px;
