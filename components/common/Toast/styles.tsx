@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const StyledToastList = styled.div`
+export const StyledToast = styled.div`
   position: fixed;
   top: 1px;
   left: 50%;
