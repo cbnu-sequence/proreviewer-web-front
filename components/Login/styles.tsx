@@ -40,13 +40,13 @@ export const StyledLogin = styled.div`
     }
   }
 
-  .register-api {
+  .social {
     text-align: center;
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    .register-google,
-    .register-github {
+    &__google,
+    &__github {
       border: 1px solid lightgray;
       border-radius: 50%;
       padding: 5px;
