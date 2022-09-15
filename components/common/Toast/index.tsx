@@ -1,9 +1,9 @@
 import { useRecoilState } from 'recoil';
 import { ToastListState } from '../../../state/recoil/toastList';
-import { StyledToastList } from './styles';
+import { StyledToast } from './styles';
 import ToastItem from './ToastItem';
 
-const ToastList = () => {
+const Toast = () => {
   const [toastList, setToastList] = useRecoilState(ToastListState);
 
   const onRemoveToastList = (id: string) => {
@@ -11,7 +11,7 @@ const ToastList = () => {
   };
 
   return (
-    <StyledToastList>
+    <StyledToast>
       {toastList.map((item) => (
         <ToastItem
           item={item}
@@ -19,8 +19,8 @@ const ToastList = () => {
           onRemoveToastList={onRemoveToastList}
         />
       ))}
-    </StyledToastList>
+    </StyledToast>
   );
 };
 
-export default ToastList;
+export default Toast;
