@@ -11,13 +11,15 @@ const Header = () => {
     <StyledHeader className="header">
       <div className="header__box">
         <Link href="/">
-          <Image
-            className="header__logo"
-            src="/proReLogo.png"
-            width="150px"
-            height="30px"
-            alt="프로리뷰어 로고"
-          />
+          <a>
+            <Image
+              className="header__logo"
+              src="/proReLogo.png"
+              width="150px"
+              height="30px"
+              alt="프로리뷰어 로고"
+            />
+          </a>
         </Link>
       </div>
       {!isOpenedMenu ? (
