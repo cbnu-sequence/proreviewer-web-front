@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
 export const StyledHeader = styled.header`
-  height: 40px;
+  height: 44px;
   .header {
-    &__div {
+    &__box {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
       text-align: center;
       z-index: 100;
@@ -11,18 +11,16 @@ export const StyledHeader = styled.header`
       left: 0;
       top: 0;
       right: 0;
-      padding: 10px 0;
-      .proReLogo {
-        margin: 11px;
-        width: 200px;
-        cursor: pointer;
-      }
+      padding: 7px 0;
+    }
+    &__logo {
+      cursor: pointer;
     }
     &__openIcon {
       position: fixed;
       left: 10px;
-      top: 12px;
-      font-size: 17px;
+      top: 14px;
+      font-size: 19px;
       z-index: 101;
       cursor: pointer;
     }
@@ -40,7 +38,7 @@ export const StyledHeader = styled.header`
       top: 0;
       left: 0;
       bottom: 0;
-      background-color: #2FA599;
+      background-color: #2fa599;
       color: white;
       width: 200px;
       font-size: 12px;

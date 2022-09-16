@@ -2,15 +2,22 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { StyledHeader } from './styles';
 import { AiOutlineMenu, AiOutlineDoubleLeft } from 'react-icons/ai';
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpenedMenu, setIsOpenedMenu] = useState(false);
 
   return (
     <StyledHeader className="header">
-      <div className="header__div">
+      <div className="header__box">
         <Link href="/">
-          <img className="proReLogo" src="/proReLogo.png" />
+          <Image
+            className="header__logo"
+            src="/proReLogo.png"
+            width="150px"
+            height="30px"
+            alt="프로리뷰어 로고"
+          />
         </Link>
       </div>
       {!isOpenedMenu ? (
