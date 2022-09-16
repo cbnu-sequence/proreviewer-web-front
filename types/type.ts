@@ -4,7 +4,7 @@ export type tokenDataTypes = {
 };
 
 export type socialLoginDataType = {
-  code: string;
+  accessToken: string;
 };
 
 export type ourLoginDataType = {

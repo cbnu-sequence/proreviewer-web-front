@@ -4,12 +4,10 @@ import { useInput } from '../../common/hooks/useInput';
 import { UseLoginMutation } from '../../state/react-query/hooks/auth';
 import { StyledLogin } from './styles';
 import Social from './Social';
-import { login } from '../../apis/auth';
+import { LOGIN_METHOD } from '../../constants/login';
 
 const Login = () => {
-  const { mutate } = UseLoginMutation(() =>
-    login({ email: email.value, password: password.value })
-  );
+  const { mutate } = UseLoginMutation(LOGIN_METHOD.SELF);
 
   const toast = useCustomToast();
 

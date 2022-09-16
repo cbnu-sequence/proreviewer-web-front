@@ -9,8 +9,8 @@ export const login = async (data: {
 };
 
 export const githubLogin = async (data: {
-  code: string;
+  accessToken: string;
 }): Promise<tokenDataTypes> => {
-  const response = await client.post('/oauth2/authorization/github', data);
+  const response = await client.post('/oauth/login/github', data);
   return response.data;
 };
