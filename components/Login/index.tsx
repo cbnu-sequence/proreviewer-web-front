@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useInput } from '../../hooks/useInput';
-import { UseLoginMutation } from '../../state/react-query/hooks/auth';
+import UseLoginMutation from '../../state/react-query/hooks/auth';
 import { StyledLogin } from './styles';
 import Social from './Social';
 import { LOGIN_METHOD } from '../../constants/login';
