@@ -12,6 +12,7 @@ export const StyledHeader = styled.header`
       top: 0;
       right: 0;
       padding: 7px 0;
+      background-color: white;
     }
     &__logo {
       cursor: pointer;
