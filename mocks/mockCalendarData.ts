@@ -7,6 +7,7 @@ export const mockCalendarData = [
       {
         title: '스택 다시보기',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: 'https://www.naver.com/',
         backgroundColor: '#f07e7e',
       },
     ],
@@ -19,6 +20,7 @@ export const mockCalendarData = [
       {
         title: '큐 다시보기',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#7ef0e3',
       },
     ],
@@ -31,11 +33,13 @@ export const mockCalendarData = [
       {
         title: '프로그래머스 복습',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#d9f07e',
       },
       {
         title: '백준 1323 복습',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: 'skyblue',
       },
     ],
@@ -48,11 +52,13 @@ export const mockCalendarData = [
       {
         title: '코딩테스트 리뷰',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#c6aca5',
       },
       {
         title: '백준 5232 복습',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#aaa5c6',
       },
     ],
@@ -65,6 +71,7 @@ export const mockCalendarData = [
       {
         title: '데이터1',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#a5c6a8',
       },
     ],
@@ -77,11 +84,13 @@ export const mockCalendarData = [
       {
         title: '데이터1',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: 'skyblue',
       },
       {
         title: '데이터2',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#6165c2',
       },
     ],
@@ -94,11 +103,13 @@ export const mockCalendarData = [
       {
         title: '데이터asdadajhgsjdajsgasdasdasdasd',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#9bc261',
       },
       {
         title: '데이터2',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#c2a761',
       },
     ],
@@ -112,11 +123,13 @@ export const mockCalendarData = [
         title:
           '데이터ㅁㄴ옴ㄴㅇㅎ머ㅗㄴㅇ허뫃ㄴㅇ머농ㅁㄴㅇㅁㄴㅇㅁㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: 'purple',
       },
       {
         title: '데이터2',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#239232',
       },
     ],
@@ -129,26 +142,31 @@ export const mockCalendarData = [
       {
         title: '데이터1',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#61c0c2',
       },
       {
         title: '데이터2',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#7bc261',
       },
       {
         title: '백준 1323 복습',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: 'skyblue',
       },
       {
         title: '백준 1323 복습',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: 'skyblue',
       },
       {
         title: '백준 1323 복습',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: 'skyblue',
       },
     ],
@@ -161,12 +179,14 @@ export const mockCalendarData = [
       {
         title: '데이터1',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: 'purple',
       },
       {
         title: '데이터2',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
-        backgroundColor: '#239232',
+        url: '',
+        backgroundColor: 'black',
       },
     ],
   },
@@ -178,11 +198,13 @@ export const mockCalendarData = [
       {
         title: '데이터1',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#ff00ff',
       },
       {
         title: '데이터2',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#239232',
       },
     ],
@@ -195,6 +217,7 @@ export const mockCalendarData = [
       {
         title: '데이터1',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#a5c6a8',
       },
     ],
@@ -207,6 +230,7 @@ export const mockCalendarData = [
       {
         title: '스택 다시보기',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#f07e7e',
       },
     ],
@@ -219,6 +243,7 @@ export const mockCalendarData = [
       {
         title: '프로그래머스 복습',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#d9f07e',
       },
       {
@@ -236,11 +261,13 @@ export const mockCalendarData = [
       {
         title: '코딩테스트 리뷰',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#c6aca5',
       },
       {
         title: '백준 5232 복습',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#aaa5c6',
       },
     ],
@@ -253,6 +280,7 @@ export const mockCalendarData = [
       {
         title: '큐 다시보기',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#7ef0e3',
       },
     ],
@@ -265,11 +293,13 @@ export const mockCalendarData = [
       {
         title: '데이터1',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#7bc261',
       },
       {
         title: '데이터2',
         content: 'ㅁㄴ엄ㄴ암ㄴ옴나오만왐ㄴ오마ㅓㄴ옴나오머',
+        url: '',
         backgroundColor: '#61c2ba',
       },
     ],

@@ -12,6 +12,7 @@ const FocusDay = ({ focusDay }: FocusDayPropsType) => {
           <div key={scheduleItemIndex}>
             <div>제목: {scheduleItem.title}</div>
             <div>내용: {scheduleItem.content}</div>
+            <div>바로가기: {scheduleItem.url}</div>
           </div>
         ))}
       </div>
