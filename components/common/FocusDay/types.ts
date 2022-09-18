@@ -1,4 +1,4 @@
-import { FocusDayType } from '../../Schedule/type';
+import { FocusDayType } from '../../Schedule/types';
 
 export type FocusDayPropsType = {
   focusDay: FocusDayType;

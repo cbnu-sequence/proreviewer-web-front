@@ -1,4 +1,4 @@
-import { FocusDayType, onClickFocusDayType } from '../../Schedule/type';
+import { FocusDayType, onClickFocusDayType } from '../../Schedule/types';
 
 export type CalendarPropsType = {
   focusDay: FocusDayType;

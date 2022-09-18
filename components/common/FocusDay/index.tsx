@@ -1,5 +1,5 @@
 import { StyledFocusDay } from './styles';
-import { FocusDayPropsType } from './type';
+import { FocusDayPropsType } from './types';
 
 const FocusDay = ({ focusDay }: FocusDayPropsType) => {
   return (

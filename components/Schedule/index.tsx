@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Calendar from '../common/Calendar';
 import FocusDay from '../common/FocusDay';
 import { StyledSchedule } from './styles';
-import { FocusDayType, onClickFocusDayType } from './type';
+import { FocusDayType, onClickFocusDayType } from './types';
 
 const Schedule = () => {
   const [focusDay, setFocusDay] = useState<FocusDayType>({

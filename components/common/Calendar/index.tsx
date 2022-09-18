@@ -16,7 +16,7 @@ import {
   selectedPrevMonth_lastDateType,
   selectedPrevYearType,
   selectedYearType,
-} from './type';
+} from './types';
 
 const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
   const [selectedYear, setSelectedYear] = useState<selectedYearType>(
