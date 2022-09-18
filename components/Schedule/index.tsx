@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { mockCalendarData } from '../../mocks/mockCalendarData';
-import { StyledCalendar } from './styles';
+import { StyledSchedule } from './styles';
 import {
   initArrType,
   newDataType,
@@ -17,7 +17,7 @@ import {
   selectedYearType,
 } from './type';
 
-const Calendar = () => {
+const Schedule = () => {
   const [selectedYear, setSelectedYear] = useState<selectedYearType>(
     new Date().getFullYear()
   );
@@ -208,7 +208,7 @@ const Calendar = () => {
   };
 
   return (
-    <StyledCalendar>
+    <StyledSchedule>
       <div className="calendar-title">
         <button
           className="calendar-title__button"
@@ -277,8 +277,8 @@ const Calendar = () => {
           ))}
         </tbody>
       </table>
-    </StyledCalendar>
+    </StyledSchedule>
   );
 };
 
-export default Calendar;
+export default Schedule;

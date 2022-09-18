@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const StyledCalendar = styled.div`
+export const StyledSchedule = styled.div`
   padding-bottom: 30px;
   .calendar-title {
     margin: 20px 0 10px;
