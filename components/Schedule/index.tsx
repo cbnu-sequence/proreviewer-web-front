@@ -14,7 +14,7 @@ const Schedule = () => {
   });
 
   useEffect(() => {
-    //(API 요청) 처음에 오늘 날짜의 데이터 받아오기
+    //(API 요청 - 수정 필요) 처음에 오늘 날짜의 데이터 받아오기
     const dayOfTheWeekArr = ['일', '월', '화', '수', '목', '금', '토'];
 
     setFocusDay({
