@@ -7,7 +7,6 @@ import { MdOutlineModeEditOutline } from 'react-icons/md';
 import Link from 'next/link';
 
 const FocusDay = ({ focusDay }: FocusDayPropsType) => {
-  //            <div>바로가기: {scheduleItem.url}</div>
   return (
     <StyledFocusDay
       className="focusday"

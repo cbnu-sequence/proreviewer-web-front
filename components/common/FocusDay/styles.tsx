@@ -3,16 +3,17 @@ import styled from '@emotion/styled';
 export const StyledFocusDay = styled.div`
   width: 910px;
   margin: 0 auto;
-  border: 1px solid #d3d3d37a;
   border-radius: 10px;
   padding: 20px;
+  background-color: #e4f2e579;
   .focusday {
     &__header {
       margin-bottom: 20px;
       position: relative;
+      text-align: center;
     }
     &__date {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
     }
     &__button {
@@ -21,7 +22,7 @@ export const StyledFocusDay = styled.div`
       cursor: pointer;
     }
     &__addBtn {
-      font-size: 21px;
+      font-size: 22px;
       color: gray;
       position: absolute;
       right: 0px;
@@ -59,11 +60,11 @@ export const StyledFocusDay = styled.div`
       border-radius: 10px;
       color: white;
       font-weight: 700;
-      padding: 10px 90px 10px 10px;
+      padding: 10px 95px 10px 10px;
       position: relative;
     }
     &__title {
-      font-size: 15px;
+      font-size: 14px;
       margin-bottom: 4px;
     }
     &__content {
@@ -73,15 +74,13 @@ export const StyledFocusDay = styled.div`
 
   @media screen and (max-width: 950px) {
     width: 100%;
+    border-radius: 20px;
   }
 
   @media screen and (max-width: 768px) {
     .focusday {
-      &__header {
-        margin-bottom: 10px;
-      }
       &__date {
-        font-size: 13px;
+        font-size: 14px;
       }
       &__addBtn {
         font-size: 17px;
