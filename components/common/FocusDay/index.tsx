@@ -6,7 +6,10 @@ import { IoAddCircle, IoClose } from 'react-icons/io5';
 const FocusDay = ({ focusDay }: FocusDayPropsType) => {
   //            <div>바로가기: {scheduleItem.url}</div>
   return (
-    <StyledFocusDay className="focusday">
+    <StyledFocusDay
+      className="focusday"
+      id={`${focusDay.year}-${focusDay.month}-${focusDay.date}`}
+    >
       <div className="focusday__header">
         <span className="focusday__date">
           {focusDay.year}.{focusDay.month}.{focusDay.date}

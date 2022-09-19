@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import { mockCalendarData } from '../../../mocks/mockCalendarData';
 import { StyledCalendar } from './styles';
@@ -260,50 +261,54 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
           {resultArr.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {row.map((day, dayIndex) => (
-                <td
+                <Link
+                  href={`#${day.year}-${day.month}-${day.date}`}
                   key={dayIndex}
-                  className="calendar-table__day"
-                  onClick={() =>
-                    onClickFocusDay({
-                      clickFocusYear: day.year,
-                      clickFocusMonth: day.month,
-                      clickFocusDate: day.date,
-                      clickFocusData: day.data,
-                    })
-                  }
-                  style={{
-                    backgroundColor: `${day.focusDayBackgroundColor}`,
-                  }}
                 >
-                  <div
-                    className="calendar-table__date"
+                  <td
+                    className="calendar-table__day"
+                    onClick={() =>
+                      onClickFocusDay({
+                        clickFocusYear: day.year,
+                        clickFocusMonth: day.month,
+                        clickFocusDate: day.date,
+                        clickFocusData: day.data,
+                      })
+                    }
                     style={{
-                      color: `${day.dateColor}`,
-                      opacity: `${day.dateOpacity}`,
+                      backgroundColor: `${day.focusDayBackgroundColor}`,
                     }}
                   >
-                    {day.date}
-                  </div>
-                  <div className="calendar-table__schedule">
-                    {day.data &&
-                      day.data.map(
-                        (scheduleItem: any, scheduleItemIndex: number) => (
-                          <div
-                            className="calendar-table__scheduleItem"
-                            key={scheduleItemIndex}
-                            style={{
-                              backgroundColor: `${scheduleItem.backgroundColor}`,
-                              opacity: `${day.dateOpacity}`,
-                            }}
-                          >
-                            {scheduleItem.title.length > 14
-                              ? scheduleItem.title.slice(0, 14) + ' ...'
-                              : scheduleItem.title}
-                          </div>
-                        )
-                      )}
-                  </div>
-                </td>
+                    <div
+                      className="calendar-table__date"
+                      style={{
+                        color: `${day.dateColor}`,
+                        opacity: `${day.dateOpacity}`,
+                      }}
+                    >
+                      {day.date}
+                    </div>
+                    <div className="calendar-table__schedule">
+                      {day.data &&
+                        day.data.map(
+                          (scheduleItem: any, scheduleItemIndex: number) => (
+                            <div
+                              className="calendar-table__scheduleItem"
+                              key={scheduleItemIndex}
+                              style={{
+                                backgroundColor: `${scheduleItem.backgroundColor}`,
+                                opacity: `${day.dateOpacity}`,
+                              }}
+                            >
+                              {scheduleItem.title.length > 14
+                                ? scheduleItem.title.slice(0, 14) + ' ...'
+                                : scheduleItem.title}
+                            </div>
+                          )
+                        )}
+                    </div>
+                  </td>
+                </Link>
               ))}
             </tr>
           ))}
