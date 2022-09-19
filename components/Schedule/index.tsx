@@ -9,15 +9,19 @@ const Schedule = () => {
     year: 0,
     month: 0,
     date: 0,
+    dayOfTheWeek: '',
     data: [],
   });
 
   useEffect(() => {
-    //(API 요청) 해당 날짜의 데이터만 받아오기 (오늘만)
+    //(API 요청) 처음에 오늘 날짜의 데이터 받아오기
+    const dayOfTheWeekArr = ['일', '월', '화', '수', '목', '금', '토'];
+
     setFocusDay({
       year: new Date().getFullYear(),
       month: new Date().getMonth() + 1,
       date: new Date().getDate(),
+      dayOfTheWeek: dayOfTheWeekArr[new Date().getDay()],
       data: [],
     });
   }, []);
@@ -26,12 +30,14 @@ const Schedule = () => {
     clickFocusYear,
     clickFocusMonth,
     clickFocusDate,
+    clickFocusDayOfTheWeek,
     clickFocusData,
   }) => {
     setFocusDay({
       year: clickFocusYear,
       month: clickFocusMonth,
       date: clickFocusDate,
+      dayOfTheWeek: clickFocusDayOfTheWeek,
       data: clickFocusData,
     });
   };

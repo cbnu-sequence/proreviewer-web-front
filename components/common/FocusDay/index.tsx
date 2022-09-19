@@ -14,7 +14,8 @@ const FocusDay = ({ focusDay }: FocusDayPropsType) => {
     >
       <div className="focusday__header">
         <span className="focusday__date">
-          {focusDay.year}.{focusDay.month}.{focusDay.date}
+          {focusDay.year}.{focusDay.month}.{focusDay.date}{' '}
+          {focusDay.dayOfTheWeek}
         </span>
         <button className="focusday__button focusday__addBtn">
           <IoAddCircle />

@@ -13,19 +13,21 @@ export type selectedNextYearType = number;
 export type selectedNextMonthType = number;
 
 export type selectedPrevMonth_lastDateType = number;
-export type selectedMonth_firstDate_DayOfTheWeekType = number;
+export type selectedMonth_firstDate_dayOfTheWeekType = number;
 export type selectedMonth_lastDateType = number;
 
 export type initArrType = Array<{
   year: number;
   month: number;
   date: number;
+  dayOfTheWeek: string;
 }>;
 
 export type newDataType = {
   year: number;
   month: number;
   date: number;
+  dayOfTheWeek: string;
   focusDayBackgroundColor?: string;
   dateColor?: string;
   dateOpacity?: string;

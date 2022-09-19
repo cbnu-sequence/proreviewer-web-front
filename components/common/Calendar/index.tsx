@@ -9,7 +9,7 @@ import {
   resultArrType,
   rowArrType,
   selectedMonthType,
-  selectedMonth_firstDate_DayOfTheWeekType,
+  selectedMonth_firstDate_dayOfTheWeekType,
   selectedMonth_lastDateType,
   selectedNextMonthType,
   selectedNextYearType,
@@ -26,11 +26,6 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
   const [selectedMonth, setSelectedMonth] = useState<selectedMonthType>(
     new Date().getMonth() + 1
   );
-
-  //year 년
-  //month 달
-  //date 일
-  //dayoftheweek 요일
 
   // 선택한 달의 이전 달
   let selectedPrevYear: selectedPrevYearType;
@@ -50,7 +45,7 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
   ).getDate();
 
   // 선택한 달의 1일 요일 //일0 월1 화2 수3 목4 금5 토6 일7
-  const selectedMonth_firstDate_DayOfTheWeek: selectedMonth_firstDate_DayOfTheWeekType =
+  const selectedMonth_firstDate_DayOfTheWeek: selectedMonth_firstDate_dayOfTheWeekType =
     new Date(selectedYear, selectedMonth - 1, 1).getDay();
 
   // 선택한 달의 마지막 날짜의 일수
@@ -71,11 +66,14 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
     selectedNextMonth = selectedMonth + 1;
   }
 
+  // 요일을 넣기 위해 배열 선언
+  const dayOfTheWeekArr = ['일', '월', '화', '수', '목', '금', '토'];
+
   /* 1. 달력 날짜 넣기 시작 */
   // 1-1. 배열 42개 초기화 (1달에 날짜는 42개)
   const initArr: initArrType = [];
   for (let i = 0; i < 42; i++) {
-    initArr.push({ year: 0, month: 0, date: 0 });
+    initArr.push({ year: 0, month: 0, date: 0, dayOfTheWeek: '' });
   }
 
   // 1-2. 선택한 달의 이전 달 마지막 날짜 넣기
@@ -89,6 +87,17 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
         selectedMonth_firstDate_DayOfTheWeek +
         i +
         1,
+      dayOfTheWeek:
+        dayOfTheWeekArr[
+          new Date(
+            selectedPrevYear,
+            selectedPrevMonth - 1,
+            selectedPrevMonth_lastDate -
+              selectedMonth_firstDate_DayOfTheWeek +
+              i +
+              1
+          ).getDay()
+        ],
     };
   }
 
@@ -104,6 +113,10 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
       year: selectedYear,
       month: selectedMonth,
       date: count,
+      dayOfTheWeek:
+        dayOfTheWeekArr[
+          new Date(selectedYear, selectedMonth - 1, count).getDay()
+        ],
     };
     count++;
   }
@@ -120,6 +133,10 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
       year: selectedNextYear,
       month: selectedNextMonth,
       date: count,
+      dayOfTheWeek:
+        dayOfTheWeekArr[
+          new Date(selectedNextYear, selectedNextMonth - 1, count).getDay()
+        ],
     };
     count++;
   }
@@ -134,6 +151,7 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
       year: initArr[i].year,
       month: initArr[i].month,
       date: initArr[i].date,
+      dayOfTheWeek: initArr[i].dayOfTheWeek,
     };
 
     // 2-2. 해당 날짜와 focus 날짜가 동일한지 비교
@@ -272,6 +290,7 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
                         clickFocusYear: day.year,
                         clickFocusMonth: day.month,
                         clickFocusDate: day.date,
+                        clickFocusDayOfTheWeek: day.dayOfTheWeek,
                         clickFocusData: day.data,
                       })
                     }
