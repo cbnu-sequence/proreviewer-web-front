@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { useInput } from '../../hooks/useInput';
 import UseLoginMutation from '../../state/react-query/hooks/auth';
 import { StyledLogin } from './styles';
-import Social from './Social';
 import { LOGIN_METHOD } from '../../constants/login';
 import { useRecoilState } from 'recoil';
 import { ToastListState } from '../../state/recoil/toastList';
 import uuid from 'react-uuid';
+import Social from './Social';
 
 const Login = () => {
   const { mutate } = UseLoginMutation(LOGIN_METHOD.SELF);
