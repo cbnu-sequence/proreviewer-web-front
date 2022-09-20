@@ -6,15 +6,13 @@ import { useRecoilState, useSetRecoilState } from 'recoil';
 import { githubLogin, login } from '../../../apis/auth';
 import { LOGIN_METHOD } from '../../../constants/login';
 import { setCookie } from '../../../cookie/user-storage';
-
-import {
-  tokenDataTypes,
-  ourLoginDataType,
-  socialLoginDataType,
-} from '../../../types/type';
-
 import { ToastListState } from '../../recoil/toastList';
 import { userState } from '../../recoil/user';
+import {
+  ourLoginDataType,
+  socialLoginDataType,
+  tokenDataTypes,
+} from './types/auth';
 
 export default function UseLoginMutation(method: string): UseMutationResult {
   let logInCallback: (
