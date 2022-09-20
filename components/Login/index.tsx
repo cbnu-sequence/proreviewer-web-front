@@ -1,30 +1,33 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { useCustomToast } from '../../common/hooks/useCustomToast';
-import { useInput } from '../../common/hooks/useInput';
-import { UseLoginMutation } from '../../state/react-query/hooks/auth';
+import { useInput } from '../../hooks/useInput';
+import UseLoginMutation from '../../state/react-query/hooks/auth';
 import { StyledLogin } from './styles';
+import { LOGIN_METHOD } from '../../constants/login';
+import { useRecoilState } from 'recoil';
+import { ToastListState } from '../../state/recoil/toastList';
+import uuid from 'react-uuid';
+import Social from './Social';
 
 const Login = () => {
-  const { mutate } = UseLoginMutation();
-
-  const toast = useCustomToast();
+  const { mutate } = UseLoginMutation(LOGIN_METHOD.SELF);
 
   const email = useInput('');
   const password = useInput('');
 
+  const [toastList, setToastList] = useRecoilState(ToastListState);
+
   const onSubmitForm = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!email.value) {
-      toast({
-        title: '이메일을 입력해주세요.',
-        status: 'warning',
-      });
+      setToastList([
+        { category: 'Warn', message: '이메일을 입력해주세요.', id: uuid() },
+        ...toastList,
+      ]);
     } else if (!password.value) {
-      toast({
-        title: '비밀번호를 입력해주세요.',
-        status: 'warning',
-      });
+      setToastList([
+        { category: 'Warn', message: '비밀번호를 입력해주세요.', id: uuid() },
+        ...toastList,
+      ]);
     } else {
       mutate({ email: email.value, password: password.value });
     }
@@ -55,24 +58,7 @@ const Login = () => {
           간편 회원가입
         </Link>
       </div>
-      <div className="register-api">
-        <div className="register-google">
-          <Image
-            src="/google.png"
-            width="19px"
-            height="19px"
-            alt="구글 로그인"
-          />
-        </div>
-        <div className="register-github">
-          <Image
-            src="/github.png"
-            width="20px"
-            height="20px"
-            alt="깃허브 로그인"
-          />
-        </div>
-      </div>
+      <Social />
     </StyledLogin>
   );
 };
