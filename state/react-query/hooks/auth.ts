@@ -5,13 +5,14 @@ import uuid from 'react-uuid';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { githubLogin, login } from '../../../apis/auth';
 import { LOGIN_METHOD } from '../../../constants/login';
+import { setCookie } from '../../../cookie/user-storage';
 
 import {
   tokenDataTypes,
   ourLoginDataType,
   socialLoginDataType,
 } from '../../../types/type';
-import { setCookie } from '../../../user-storage';
+
 import { ToastListState } from '../../recoil/toastList';
 import { userState } from '../../recoil/user';
 
