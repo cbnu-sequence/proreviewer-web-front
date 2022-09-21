@@ -8,18 +8,19 @@ export const StyledSidebarBox = styled.aside`
   background-color: #2fa599;
   color: white;
   width: 230px;
-  z-index: 100;
+  z-index: 101;
   .sidebar-box {
     &__closeIcon {
-      margin: 15px 5px 0 0;
-      display: flex;
-      justify-content: end;
+      position: fixed;
+      top: 15px;
+      left: 205px;
+      z-index: 101;
       font-size: 16px;
       cursor: pointer;
       color: white;
     }
     &__link {
-      margin-top: 50px;
+      margin-top: 80px;
       text-align: center;
       font-size: 14px;
       a {
@@ -32,7 +33,12 @@ export const StyledSidebarBox = styled.aside`
   @media screen and (max-width: 768px) {
     width: 200px;
     .sidebar-box {
+      &__closeIcon {
+        top: 10px;
+        left: 178px;
+      }
       &__link {
+        margin-top: 55px;
         font-size: 13px;
       }
     }
