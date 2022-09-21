@@ -8,34 +8,32 @@ export const StyledSidebarBox = styled.aside`
   background-color: #2fa599;
   color: white;
   width: 230px;
-  text-align: center;
-  padding-top: 40px;
   z-index: 100;
-  a {
-    display: block;
-    margin: 30px 0;
-    font-size: 14px;
-  }
   .sidebar-box {
     &__closeIcon {
-      position: fixed;
-      top: 12px;
-      left: 205px;
+      margin: 15px 5px 0 0;
+      display: flex;
+      justify-content: end;
       font-size: 16px;
-      z-index: 101;
       cursor: pointer;
       color: white;
+    }
+    &__link {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 14px;
+      a {
+        display: block;
+        margin: 30px 0;
+      }
     }
   }
 
   @media screen and (max-width: 768px) {
     width: 200px;
-    a {
-      font-size: 13px;
-    }
     .sidebar-box {
-      &__closeIcon {
-        left: 178px;
+      &__link {
+        font-size: 13px;
       }
     }
   }
