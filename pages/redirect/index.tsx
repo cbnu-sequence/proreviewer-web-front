@@ -1,24 +1,16 @@
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
-import { githubLogin } from '../../apis/auth';
-import Loading from '../../components/common/Loading';
-import { UseLoginMutation } from '../../state/react-query/hooks/auth';
+import Head from 'next/head';
+import Redirect from '../../components/Redirect';
 
-const Redirect = () => {
-  const router = useRouter();
-  //   useEffect(() => {
-  //     const code = new URL(window.location.href).searchParams.get(
-  //       'code'
-  //     ) as string;
-  //     const { isSuccess } = UseLoginMutation(() => githubLogin({ code: code }));
-  //     isSuccess && router.push('/');
-  //   }, [router]);
-
+const RedirectPage = () => {
   return (
     <>
-      <Loading />
+      <Head>
+        <title>로그인</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Redirect />
     </>
   );
 };
 
-export default Redirect;
+export default RedirectPage;
