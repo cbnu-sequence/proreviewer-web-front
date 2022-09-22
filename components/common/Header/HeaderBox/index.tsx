@@ -3,11 +3,14 @@ import Image from 'next/image';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { StyledHeaderBox } from './styles';
 import { HeaderBoxPropsType } from './types';
+import { useState } from 'react';
 
 const HeaderBox = ({
   isOpenedSideBar,
   setIsOpenedSideBar,
 }: HeaderBoxPropsType) => {
+  const [isOpenedProfileBox, setIsOpenedProfileBox] = useState(false);
+
   return (
     <StyledHeaderBox className="header-box">
       {!isOpenedSideBar && (
@@ -29,6 +32,18 @@ const HeaderBox = ({
           />
         </a>
       </Link>
+      <span
+        className="header-box__profile"
+        onClick={() => setIsOpenedProfileBox(!isOpenedProfileBox)}
+      >
+        <Image src="/user.png" layout="fill" alt="프로필" />
+      </span>
+      {isOpenedProfileBox && (
+        <div className="header-box__profile-box">
+          <button className="header-box__profile-button">프로필</button>
+          <button className="header-box__profile-button">로그아웃</button>
+        </div>
+      )}
     </StyledHeaderBox>
   );
 };
