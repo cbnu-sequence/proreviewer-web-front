@@ -1,6 +1,5 @@
 import { tokenDataTypes } from '../state/react-query/hooks/types/auth';
-import { client } from './axiosClient/client';
-
+import client from './axiosClient';
 export const login = async (data: {
   email: string;
   password: string;
