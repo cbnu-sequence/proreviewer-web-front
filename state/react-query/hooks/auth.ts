@@ -4,7 +4,6 @@ import { useMutation, UseMutationResult } from 'react-query';
 import uuid from 'react-uuid';
 import { useRecoilState, useSetRecoilState } from 'recoil';
 import { githubLogin, login } from '../../../apis/auth';
-import { requestInterceptor } from '../../../apis/axiosClient/interceptor';
 import { LOGIN_METHOD } from '../../../constants/login';
 import { setCookie } from '../../../cookie/user-storage';
 import { ToastListState } from '../../recoil/toastList';
@@ -38,7 +37,6 @@ export default function UseLoginMutation(method: string): UseMutationResult {
       setUser({ accessToken: data.accessToken });
       // refresh는 쿠키에
       setCookie('refresh', data.refreshToken);
-      requestInterceptor(data.accessToken);
       router.push('/');
       setToast([
         { category: 'Success', message: '로그인에 성공했습니다!', id: uuid() },
