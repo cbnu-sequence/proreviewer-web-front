@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useMutation, UseMutationResult } from 'react-query';
 import uuid from 'react-uuid';
 import { useRecoilState, useSetRecoilState } from 'recoil';
-import { githubLogin, login } from '../../../apis/auth';
+import { githubLogin, googleLogin, login } from '../../../apis/auth';
 import { requestInterceptor } from '../../../apis/axiosClient/interceptor';
 import { LOGIN_METHOD } from '../../../constants/login';
 import { setCookie } from '../../../cookie/user-storage';
@@ -11,13 +11,13 @@ import { ToastListState } from '../../recoil/toastList';
 import { userState } from '../../recoil/user';
 import {
   ourLoginDataType,
-  socialLoginDataType,
+  codeLoginDataType,
   tokenDataTypes,
 } from './types/auth';
 
 export default function UseLoginMutation(method: string): UseMutationResult {
   let logInCallback: (
-    data: ourLoginDataType | socialLoginDataType
+    data: ourLoginDataType | codeLoginDataType
   ) => Promise<tokenDataTypes> = login;
   const router = useRouter();
   const [toast, setToast] = useRecoilState(ToastListState);
@@ -25,6 +25,9 @@ export default function UseLoginMutation(method: string): UseMutationResult {
   switch (method) {
     case LOGIN_METHOD.GITHUB:
       logInCallback = githubLogin;
+      break;
+    case LOGIN_METHOD.GOOGLE:
+      logInCallback = googleLogin;
       break;
     case LOGIN_METHOD.SELF:
       logInCallback = login;
