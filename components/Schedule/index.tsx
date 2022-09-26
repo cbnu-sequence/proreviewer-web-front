@@ -16,12 +16,13 @@ const Schedule = () => {
   useEffect(() => {
     //(API 요청 - 수정 필요) 처음에 오늘 날짜의 데이터 받아오기
     const dayOfTheWeekArr = ['일', '월', '화', '수', '목', '금', '토'];
+    const today = new Date();
 
     setFocusDay({
-      year: new Date().getFullYear(),
-      month: new Date().getMonth() + 1,
-      date: new Date().getDate(),
-      dayOfTheWeek: dayOfTheWeekArr[new Date().getDay()],
+      year: today.getFullYear(),
+      month: today.getMonth() + 1,
+      date: today.getDate(),
+      dayOfTheWeek: dayOfTheWeekArr[today.getDay()],
       data: [],
     });
   }, []);
