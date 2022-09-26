@@ -63,10 +63,12 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
 
   const dayOfTheWeekArr = ['일', '월', '화', '수', '목', '금', '토'];
 
-  const initArr: initArrType = [];
-  for (let i = 0; i < 42; i++) {
-    initArr.push({ year: 0, month: 0, date: 0, dayOfTheWeek: '' });
-  }
+  const initArr: initArrType = Array.from({ length: 42 }, () => ({
+    year: 0,
+    month: 0,
+    date: 0,
+    dayOfTheWeek: '',
+  }));
 
   for (let i = 0; i < selectedMonth_firstDate_DayOfTheWeek; i++) {
     initArr[i] = {
