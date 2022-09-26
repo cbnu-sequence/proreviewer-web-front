@@ -7,15 +7,15 @@ export type FocusDayType = {
 };
 
 export type onClickFocusDayType = ({
-  clickFocusYear,
-  clickFocusMonth,
-  clickFocusDate,
-  clickFocusDayOfTheWeek,
-  clickFocusData,
+  focusYear,
+  focusMonth,
+  focusDate,
+  focusDayOfTheWeek,
+  focusData,
 }: {
-  clickFocusYear: number;
-  clickFocusMonth: number;
-  clickFocusDate: number;
-  clickFocusDayOfTheWeek: string;
-  clickFocusData: any;
+  focusYear: number;
+  focusMonth: number;
+  focusDate: number;
+  focusDayOfTheWeek: string;
+  focusData: any;
 }) => void;
