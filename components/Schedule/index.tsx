@@ -28,18 +28,18 @@ const Schedule = () => {
   }, []);
 
   const onClickFocusDay: onClickFocusDayType = ({
-    clickFocusYear,
-    clickFocusMonth,
-    clickFocusDate,
-    clickFocusDayOfTheWeek,
-    clickFocusData,
+    focusYear,
+    focusMonth,
+    focusDate,
+    focusDayOfTheWeek,
+    focusData,
   }) => {
     setFocusDay({
-      year: clickFocusYear,
-      month: clickFocusMonth,
-      date: clickFocusDate,
-      dayOfTheWeek: clickFocusDayOfTheWeek,
-      data: clickFocusData,
+      year: focusYear,
+      month: focusMonth,
+      date: focusDate,
+      dayOfTheWeek: focusDayOfTheWeek,
+      data: focusData,
     });
   };
 

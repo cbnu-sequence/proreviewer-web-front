@@ -267,11 +267,11 @@ const Calendar = ({ focusDay, onClickFocusDay }: CalendarPropsType) => {
                     className="calendar-table__day"
                     onClick={() =>
                       onClickFocusDay({
-                        clickFocusYear: day.year,
-                        clickFocusMonth: day.month,
-                        clickFocusDate: day.date,
-                        clickFocusDayOfTheWeek: day.dayOfTheWeek,
-                        clickFocusData: day.data,
+                        focusYear: day.year,
+                        focusMonth: day.month,
+                        focusDate: day.date,
+                        focusDayOfTheWeek: day.dayOfTheWeek,
+                        focusData: day.data,
                       })
                     }
                     style={{
