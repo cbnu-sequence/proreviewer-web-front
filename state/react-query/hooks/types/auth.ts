@@ -3,7 +3,7 @@ export type tokenDataTypes = {
   refreshToken: string;
 };
 
-export type socialLoginDataType = {
+export type codeLoginDataType = {
   code: string;
 };
 

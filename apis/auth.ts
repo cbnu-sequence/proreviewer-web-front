@@ -14,3 +14,10 @@ export const githubLogin = async (data: {
   const response = await client.post('/auth/login/github', data);
   return response.data;
 };
+
+export const googleLogin = async (data: {
+  code: string;
+}): Promise<tokenDataTypes> => {
+  const response = await client.post('/auth/login/google', data);
+  return response.data;
+};

@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Calendar from '../../components/Calendar';
 import Header from '../../components/common/Header';
+import Schedule from '../../components/Schedule';
 
-const CalendarPage = () => {
+const SchedulePage = () => {
   return (
     <>
       <Head>
@@ -10,9 +10,9 @@ const CalendarPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Calendar />
+      <Schedule />
     </>
   );
 };
 
-export default CalendarPage;
+export default SchedulePage;
