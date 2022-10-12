@@ -1,5 +1,7 @@
 export const pr_Darkgreen = '#12887A';
 export const pr_Lightgreen = '#82CBC4';
+export const prBlueGoogle = '#4285f4';
+export const prGrayGithub = '#5c5c5c';
 
 export const pr_Green_SuccessBox = `
   background-color: #d1e7dd;

@@ -7,24 +7,38 @@ const Social = () => {
 
   return (
     <div className="social">
+      <div className="social__logo">
+        <Image
+          src="/proReLogo.png"
+          width="300px"
+          height="60px"
+          alt="프로리뷰어 로고"
+        />
+      </div>
       <Link href={GOOGLE_LOGIN_URI} passHref>
         <div className="social__google">
-          <Image
-            src="/google.png"
-            width="19px"
-            height="19px"
-            alt="구글 로그인"
-          />
+          <span className="social__image">
+            <Image
+              src="/google.png"
+              width="19px"
+              height="19px"
+              alt="구글 로그인"
+            />
+          </span>
+          <span className="social__text">구글 로그인</span>
         </div>
       </Link>
       <Link href={GITHUB_LOGIN_URI} passHref>
         <div className="social__github">
-          <Image
-            src="/github.png"
-            width="20px"
-            height="20px"
-            alt="깃헙 로그인"
-          />
+          <span className="social__image">
+            <Image
+              src="/github.png"
+              width="22px"
+              height="22px"
+              alt="깃헙 로그인"
+            />
+          </span>
+          <span className="social__text">깃허브 로그인</span>
         </div>
       </Link>
     </div>
