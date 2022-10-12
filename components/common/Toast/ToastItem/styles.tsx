@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import {
-  prBlueInfoBox,
-  prGreenSuccessBox,
-  prRedFailureBox,
-  prYellowWarnBox,
+  prBlueInfobox,
+  prGreenSuccessbox,
+  prRedFailurebox,
+  prYellowWarnbox,
 } from '../../../../styles/colors';
 
 type StyledToastItemProps = {
@@ -41,21 +41,21 @@ export const StyledToastItem = styled.div<StyledToastItemProps>`
   ${(props) =>
     props.category === 'Success' &&
     css`
-      ${prGreenSuccessBox};
+      ${prGreenSuccessbox};
     `}
   ${(props) =>
     props.category === 'Failure' &&
     css`
-      ${prRedFailureBox};
+      ${prRedFailurebox};
     `}
   ${(props) =>
     props.category === 'Warn' &&
     css`
-      ${prYellowWarnBox};
+      ${prYellowWarnbox};
     `}
   ${(props) =>
     props.category === 'Info' &&
     css`
-      ${prBlueInfoBox};
+      ${prBlueInfobox};
     `}
 `;
