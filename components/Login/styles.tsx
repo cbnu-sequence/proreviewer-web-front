@@ -1,66 +1,44 @@
 import styled from '@emotion/styled';
+import { prBlueGoogle, prGrayGithub } from '../../styles/colors';
 
 export const StyledLogin = styled.div`
-  form {
-    width: 35%;
-    margin: 30vh auto 0;
-    text-align: center;
-    input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid lightgray;
-      border-radius: 5px;
-      font-size: 11px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 10px;
-      font-weight: 700;
-      background-color: skyblue;
-      font-size: 11px;
-      color: white;
-      cursor: pointer;
-    }
-  }
-  .register-proreviewer {
-    text-align: center;
-    margin-top: 20px;
-    span {
-      font-size: 11px;
-      margin-right: 10px;
-    }
-    a {
-      font-size: 11px;
-      font-weight: 700;
-      color: skyblue;
-    }
-  }
-
+  padding-top: 150px;
   .social {
-    text-align: center;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+    width: 350px;
+    margin: 0 auto;
+
+    &__logo {
+      margin-bottom: 90px;
+      display: flex;
+      justify-content: center;
+    }
+
     &__google,
     &__github {
-      border: 1px solid lightgray;
-      border-radius: 50%;
-      padding: 5px;
-      margin: 0 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 350px;
+      padding: 10px;
+      margin: 5px auto;
       cursor: pointer;
+      color: white;
+      text-align: center;
+      font-weight: 600;
+      font-size: 15px;
+      position: relative;
+      border-radius: 5px;
     }
-  }
 
-  @media screen and (max-width: 768px) {
-    form {
-      width: 80%;
+    &__image {
+      position: absolute;
+      left: 10px;
+      top: 8px;
+    }
+
+    &__google {
+      background-color: ${prBlueGoogle};
+    }
+
+    &__github {
+      background-color: ${prGrayGithub};
     }
   }
 `;
