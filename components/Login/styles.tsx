@@ -2,10 +2,7 @@ import styled from '@emotion/styled';
 import { prBlueGoogle, prGrayGithub } from '../../styles/colors';
 
 export const StyledLogin = styled.div`
-  background-image: url('/book.jpg');
-  min-height: 100vh;
-  background-size: 100% 100%;
-  padding-top: 90px;
+  padding-top: 150px;
   .social {
     width: 350px;
     margin: 0 auto;
